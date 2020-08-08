@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Functions | XQuery for Humanists</title>
+<meta name="generator" content="Jekyll v4.0.0" />
+<meta property="og:title" content="Functions" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Companion website" />
+<meta property="og:description" content="Companion website" />
+<link rel="canonical" href="https://xquery.forhumanists.org/functions/" />
+<meta property="og:url" content="https://xquery.forhumanists.org/functions/" />
+<meta property="og:site_name" content="XQuery for Humanists" />
+<script type="application/ld+json">
+{"description":"Companion website","headline":"Functions","@type":"WebPage","url":"https://xquery.forhumanists.org/functions/","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link type="application/atom+xml" rel="alternate" href="https://xquery.forhumanists.org/feed.xml" title="XQuery for Humanists" /><!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-161528434-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-161528434-1');
+</script></head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">XQuery for Humanists</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/code/">Code</a><a class="page-link" href="/errata/">Errata</a><a class="page-link" href="/functions/">Functions</a><a class="page-link" href="/implementations/">Implementations</a><a class="page-link" href="/"></a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">Functions</h1>
+  </header>
+
+  <div class="post-content">
+    <p>The built-in function library for XQuery can be browsed at <a href="https://www.w3.org/TR/xpath-functions-31/">XPath and XQuery Functions and Operators 3.1</a>. In addition, each of the XQuery implementations discussed in the book offers online and/or in-app function documentation, and there are other convenient sources too.</p>
+
+<h2 id="basex">BaseX</h2>
+
+<p>All BaseX functions are documented on the BaseX <a href="http://docs.basex.org/wiki/Module_Library">Module Library</a> page.</p>
+
+<p>The BaseX GUI does not expose function documentation.</p>
+
+<h2 id="exist">eXist</h2>
+
+<p>The eXist <a href="https://exist-db.org/exist/apps/fundocs/index.html">XQuery Function Documentation</a> application lets you search or browse through all of the built-in functions, extension functions that ship with eXist, and modules that you have annotated with XQDoc (see Chapter 11 for discussion of XQDoc). This utility is included in the eXist distribution, accessible from the Dashboard.</p>
+
+<p>In addition, eXist offers function documentation in several development environments:</p>
+
+<ul>
+  <li>In eXide, you can look up a function’s documentation by placing the cursor in the function name and selecting Navigate &gt; Function doc, or using the keyboard shortcut of F1. A pop-up window will appear with documentation about any matching functions.</li>
+  <li>In Atom, with the atom-existdb package installed, Atom monitors your keystrokes, and if it detects that you are typing an XQuery function, it will display a hovering window below the cursor containing the documentation for the function.</li>
+  <li>See <a href="#oxygen">oXygen</a> below for directions on how to configure it to suggest eXist functions as you type them and display compact documentation about each function.</li>
+</ul>
+
+<h2 id="oxygen">oXygen</h2>
+
+<p>When editing XQuery in oXygen, with Saxon or eXist selected as the XQuery validation engine (configured via Preferences &gt; XQuery &gt; XML &gt; XSLT-FO-XQuery &gt; XQuery &gt; Validation engine), you can invoke oXygen’s Content Completion feature (via Document &gt; Content Completion &gt; Start Content Completion) to suggest functions as you type them and display compact documentation about each function.</p>
+
+<h2 id="saxon">Saxon</h2>
+
+<p>Saxon’s <a href="https://www.saxonica.com/html/documentation/functions/">Function Library</a> page lists documentation about standard and extension functions.</p>
+
+<h2 id="other-sources">Other sources</h2>
+
+<p>For a convenient way to search functions offline, Norm Tovey-Walsh has adapted the XPath and XQuery Functions and Operators 3.1 specification to the <a href="https://dash.nwalsh.com/">“docset”</a> format used by <a href="https://kapeli.com/dash">Dash</a> on macOS and many similar utilities for <a href="https://blog.kapeli.com/dash-for-ios-android-windows-or-linux">other operating systems</a>).</p>
+
+  </div>
+
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">XQuery for Humanists</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col"><ul class="social-media-list"><li>Clifford B. Anderson</li><li>Joseph C. Wicentowski</li></ul>
+</div>
+
+      <div class="footer-col"><ul class="social-media-list"><li><a href="https://github.com/cliffordanderson"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">cliffordanderson</span></a></li><li><a href="https://github.com/joewiz"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">joewiz</span></a></li><li><a href="https://github.com/coding4humanists"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">coding4humanists</span></a></li></ul>
+</div>
+
+      <div class="footer-col"><ul class="social-media-list"><li><a href="https://www.twitter.com/andersoncliffb"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">andersoncliffb</span></a></li><li><a href="https://www.twitter.com/joewiz"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">joewiz</span></a></li><li><a href="https://www.twitter.com/coding4humanist"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">coding4humanist</span></a></li></ul>
+</div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>

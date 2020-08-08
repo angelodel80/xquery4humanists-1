@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>XQuery for Humanists | Companion website</title>
+<meta name="generator" content="Jekyll v4.0.0" />
+<meta property="og:title" content="XQuery for Humanists" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Companion website" />
+<meta property="og:description" content="Companion website" />
+<link rel="canonical" href="https://xquery.forhumanists.org/" />
+<meta property="og:url" content="https://xquery.forhumanists.org/" />
+<meta property="og:site_name" content="XQuery for Humanists" />
+<script type="application/ld+json">
+{"description":"Companion website","headline":"XQuery for Humanists","name":"XQuery for Humanists","@type":"WebSite","url":"https://xquery.forhumanists.org/","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link type="application/atom+xml" rel="alternate" href="https://xquery.forhumanists.org/feed.xml" title="XQuery for Humanists" /><!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-161528434-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-161528434-1');
+</script></head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">XQuery for Humanists</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/code/">Code</a><a class="page-link" href="/errata/">Errata</a><a class="page-link" href="/functions/">Functions</a><a class="page-link" href="/implementations/">Implementations</a><a class="page-link" href="/"></a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <div class="home"><p><img src="https://texas-am.imgix.net/covers/9781623498290.jpg?auto=format&amp;h=300" alt="Cover image for XQuery for Humanists" /></p>
+
+<h2 id="welcome">Welcome!</h2>
+
+<p>Welcome to the companion website for <em>XQuery for Humanists</em>, written by <a href="https://www.cliffordanderson.net/">Clifford B. Anderson</a> and <a href="https://joewiz.org">Joseph C. Wicentowski</a> and published by Texas A&amp;M University Press in 2020. This website offers supplementary material for readers of the book and those interested in its contents:</p>
+
+<ul>
+  <li>An online and downloadable set of <a href="code/">the code</a> listed in the book.</li>
+  <li>Extensive information about the four <a href="implementations/">XQuery implementations</a> introduced in the book, including each their built-in facilities for browsing <a href="functions/">function documentation</a>.</li>
+  <li>A list of <a href="errata/">errata</a> discovered in the book after it went to press.</li>
+  <li>The full <a href="#table-of-contents">table of contents</a>.</li>
+</ul>
+
+<p>Also:</p>
+
+<ul>
+  <li>To discuss the book with other readers, please <a href="https://groups.google.com/forum/#!forum/xqfh">join the book’s mailing list</a>.</li>
+  <li>To report errors in the book or a problem with this website, please submit an issue or open a pull request on <a href="https://github.com/coding4humanists/xquery4humanists/issues/new">the book’s GitHub repository</a>.</li>
+  <li>To purchase the book, visit <a href="https://www.amazon.com/dp/1623498295">Amazon</a> or <a href="https://www.tamupress.com/book/9781623498290/xquery-for-humanists/">Texas A&amp;M University Press</a>; see the latter to request a review or exam copy.</li>
+</ul>
+
+<h2 id="about-the-book">About the Book</h2>
+
+<p>XQuery is the best language for querying, manipulating, and transforming XML and JSON documents. Because XML is in many ways the lingua franca of the digital humanities, learning XQuery empowers humanists to discover and analyze their data in new ways.</p>
+
+<p>Until now, though, XQuery has been difficult to learn because there was no textbook designed for non-programmers or beginner programmers. <em>XQuery for Humanists</em> fills this void with an approachable guidebook aimed directly at digital humanists.</p>
+
+<p>Clifford B. Anderson and Joseph C. Wicentowski introduce XQuery in terms accessible to humanities scholars and do not presuppose any prior background in programming. It provides an informed, opinionated overview and recommends the best implementations, libraries, and paradigms to empower those who need it most. Emphasizing practical applicability, the authors go beyond the XQuery language to include the basics of underlying standards like XPath, related standards like XQuery Full Text and XQuery Update, and explain the difference between XQuery and languages like Python and R. This book will afford readers the skills they need to build and analyze large-scale documentary corpora in XML.</p>
+
+<p><em>XQuery for Humanists</em> is immeasurably valuable to instructors of digital humanities and library science courses alike and likewise is a ready reference for faculty, graduate students, and librarians who seek to master XQuery for their projects.</p>
+
+<h2 id="table-of-contents">Table of Contents</h2>
+
+<ul>
+  <li>Introduction … xiii</li>
+</ul>
+
+<h3 id="chapter-1-why-xquery-for-humanists--1">Chapter 1: Why XQuery for Humanists? … 1</h3>
+
+<ul>
+  <li>1.1 Built for the Kind of Data Most Digital Humanists Use … 1</li>
+  <li>1.2 Easy for Beginning Programmers to Learn … 4</li>
+  <li>1.3 XML and Digital Humanities Data … 7
+    <ul>
+      <li>1.3.1 XML Compared to Other Formats … 9
+        <ul>
+          <li>1.3.1.1 JSON … 9</li>
+          <li>1.3.1.2 RDF … 11</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>1.4 XQuery Compared to XSLT … 13</li>
+  <li>1.5 A Great Digital Humanities Community … 15</li>
+  <li>1.6 Questions … 17</li>
+</ul>
+
+<h3 id="chapter-2-setting-up-your-xquery-environment--18">Chapter 2: Setting up Your XQuery Environment … 18</h3>
+
+<ul>
+  <li>2.1 Installing Java … 21</li>
+  <li>2.2 Setting up BaseX … 21</li>
+  <li>2.3 Setting up eXist … 22</li>
+  <li>2.4 Setting up oXygen … 24</li>
+  <li>2.5 Setting up Saxon … 26</li>
+  <li>2.6 Accessing Online Companion Materials … 27</li>
+  <li>2.7 Preserving and Sharing Code with GitHub … 27</li>
+  <li>2.8 Questions and Exercises … 31</li>
+</ul>
+
+<h3 id="chapter-3-reviewing-xml-and-related-standards--33">Chapter 3: Reviewing XML and Related Standards … 33</h3>
+
+<ul>
+  <li>3.1 History and Goals of XML … 33</li>
+  <li>3.2 XML Basics … 35
+    <ul>
+      <li>3.2.1 Writing Well-Formed XML … 35</li>
+      <li>3.2.2 Writing Valid XML … 39</li>
+    </ul>
+  </li>
+  <li>3.3 XML as a Data Standard … 41</li>
+  <li>3.4 XML Gotchas … 44
+    <ul>
+      <li>3.4.1 Embracing Namespaces … 46</li>
+      <li>3.4.2 Escaping Strings … 49</li>
+      <li>3.4.3 Whitespace … 50</li>
+    </ul>
+  </li>
+  <li>3.5 Questions and Exercises … 52</li>
+</ul>
+
+<h3 id="chapter-4-finding-your-way-around-with-xpath--55">Chapter 4: Finding Your Way Around with XPath … 55</h3>
+
+<ul>
+  <li>4.1 XPath Axes … 57</li>
+  <li>4.2 Node Tests by Kind … 58</li>
+  <li>4.3 XPath’s Abbreviated Syntax … 61</li>
+  <li>4.4 XPath Functions … 63</li>
+  <li>4.5 XPath Tips and Tricks … 72
+    <ul>
+      <li>4.5.1 Wildcards … 72</li>
+      <li>4.5.2 Value Comparisons … 73</li>
+      <li>4.5.3 Selecting Multiple Element Names with the Union Operator … 75</li>
+      <li>4.5.4 Selecting the “Nth” Item or a Range of Items … 75</li>
+    </ul>
+  </li>
+  <li>4.6 Questions and Exercises … 76</li>
+</ul>
+
+<h3 id="chapter-5-xquery-basics--79">Chapter 5: XQuery Basics … 79</h3>
+
+<ul>
+  <li>5.1 The Parts of an XQuery … 80</li>
+  <li>5.2 Enclosed Expressions and Curly Braces … 84</li>
+  <li>5.3 FLWOR Expressions … 85
+    <ul>
+      <li>5.3.1 Binding Variables … 86</li>
+      <li>5.3.2 Iterating over Variables … 88</li>
+      <li>5.3.3 Filtering Results … 90
+        <ul>
+          <li>5.3.3.1 A Short Note on Comparisons … 92</li>
+        </ul>
+      </li>
+      <li>5.3.4 Ordering Results … 94</li>
+      <li>5.3.5 Counting Results … 96</li>
+      <li>5.3.6 Grouping Results … 98</li>
+    </ul>
+  </li>
+  <li>5.4 Conditional Expressions … 101
+    <ul>
+      <li>5.4.1 Effective Boolean Values … 102</li>
+      <li>5.4.2 The Else Clause Is Required: A Few Tips About Using Conditional Expressions … 103</li>
+      <li>5.4.3 Chaining Conditional Expressions … 104</li>
+    </ul>
+  </li>
+  <li>5.5 Questions and Exercises … 105</li>
+</ul>
+
+<h3 id="chapter-6-next-steps-with-xquery--107">Chapter 6: Next Steps with XQuery … 107</h3>
+
+<ul>
+  <li>6.1 The Built-In Function Library … 107</li>
+  <li>6.2 Writing Your Own Functions … 114</li>
+  <li>6.3 Using Library Modules … 119
+    <ul>
+      <li>6.3.1 Importing Library Modules … 119</li>
+      <li>6.3.2 Creating Your Own Library Modules … 121</li>
+      <li>6.3.3 Public and Private Functions … 124</li>
+      <li>6.3.4 Wrapping Up … 127</li>
+    </ul>
+  </li>
+  <li>6.4 Questions and Exercises … 127</li>
+</ul>
+
+<h3 id="chapter-7-advanced-xquery--131">Chapter 7: Advanced XQuery … 131</h3>
+
+<ul>
+  <li>7.1 String Constructors … 131</li>
+  <li>7.2 Maps and Arrays … 136
+    <ul>
+      <li>7.2.1 Revisiting Sequences … 136</li>
+      <li>7.2.2 Maps … 139</li>
+      <li>7.2.3 Arrays … 145</li>
+      <li>7.2.4 Combining Maps and Arrays … 147</li>
+      <li>7.2.5 Modifying Maps and Arrays … 149</li>
+    </ul>
+  </li>
+  <li>7.3 Windowing … 152
+    <ul>
+      <li>7.3.1 Understanding Tuple Streams … 152</li>
+      <li>7.3.2 Tumbling Windows … 154</li>
+      <li>7.3.3 Sliding Windows … 156</li>
+    </ul>
+  </li>
+  <li>7.4 Questions and Exercises … 160</li>
+</ul>
+
+<h3 id="chapter-8-thinking-functionally--163">Chapter 8: Thinking Functionally … 163</h3>
+
+<ul>
+  <li>8.1 Immutability … 164</li>
+  <li>8.2 Maps … 167</li>
+  <li>8.3 Folds … 172</li>
+  <li>8.4 Recursion … 176
+    <ul>
+      <li>8.4.1 Transforming Data with Recursive Typeswitch … 179</li>
+    </ul>
+  </li>
+  <li>8.5 Higher-Order Functions … 191</li>
+  <li>8.6 Questions and Exercises … 198</li>
+</ul>
+
+<h3 id="chapter-9-modifying-your-data-with-xquery-update--200">Chapter 9: Modifying Your Data with XQuery Update … 200</h3>
+
+<ul>
+  <li>9.1 Copying Data … 201</li>
+  <li>9.2 Transform Expressions … 204
+    <ul>
+      <li>9.2.1 Insert … 204</li>
+      <li>9.2.2 Delete … 206</li>
+      <li>9.2.3 Replace … 207</li>
+      <li>9.2.4 Rename … 209</li>
+      <li>9.2.5 Transform With … 211</li>
+    </ul>
+  </li>
+  <li>9.3 Updating Expressions … 215
+    <ul>
+      <li>9.3.1 Changing the World … 215</li>
+      <li>9.3.2 Updating Functions … 219</li>
+    </ul>
+  </li>
+  <li>9.4 Questions and Exercises … 222</li>
+</ul>
+
+<h3 id="chapter-10-searching-with-xquery-full-text--224">Chapter 10: Searching with XQuery Full Text … 224</h3>
+
+<ul>
+  <li>10.1 Finding Patterns with XPath … 224
+    <ul>
+      <li>10.1.1 Searching Substrings … 225</li>
+      <li>10.1.2 Regular Expressions … 226</li>
+    </ul>
+  </li>
+  <li>10.2 The Full Text Contains Text Operator … 230
+    <ul>
+      <li>10.2.1 Scoring … 233</li>
+      <li>10.2.2 Any-All Options … 234</li>
+      <li>10.2.3 Cardinality … 236</li>
+      <li>10.2.4 Positional Filters … 237</li>
+      <li>10.2.5 Weighting … 242</li>
+      <li>10.2.6 Match Options … 244</li>
+    </ul>
+  </li>
+  <li>10.3 Questions and Exercises … 249</li>
+</ul>
+
+<h3 id="chapter-11-handling-errors-gracefully--251">Chapter 11: Handling Errors Gracefully … 251</h3>
+
+<ul>
+  <li>11.1 Documenting Your XQuery with XQDoc … 252</li>
+  <li>11.2 Catching Mistakes Before You Run Anything … 257</li>
+  <li>11.3 Catching Errors at Runtime … 260</li>
+  <li>11.4 Unit Testing with XQuery … 265</li>
+  <li>11.5 Questions and Exercises … 266</li>
+</ul>
+
+<h3 id="chapter-12-using-xquery-with-other-digital-humanities-tools--269">Chapter 12: Using XQuery with Other Digital Humanities Tools … 269</h3>
+
+<ul>
+  <li>12.1 XQuery and JSON … 271</li>
+  <li>12.2 XQuery and CSV … 280</li>
+  <li>12.3 XQuery and XSLT … 290</li>
+  <li>12.4 Questions and Exercises … 294</li>
+</ul>
+
+<h3 id="chapter-13-conclusion--296">Chapter 13: Conclusion … 296</h3>
+
+<ul>
+  <li>13.1 XQuery Paralipomena … 296
+    <ul>
+      <li>13.1. Web Applications … 297</li>
+      <li>13.1.2 Databases … 299</li>
+    </ul>
+  </li>
+  <li>13.2 The XQuery Community … 300
+    <ul>
+      <li>13.2.1 Books … 300</li>
+      <li>13.2.2 Digital Forums … 301</li>
+      <li>13.2.3 Conferences and Training … 303</li>
+    </ul>
+  </li>
+  <li>13.3 Questions and Exercises … 304</li>
+</ul>
+
+<h3 id="back-matter">Back Matter</h3>
+
+<ul>
+  <li>Acknowledgments … 305</li>
+  <li>Notes … 307</li>
+  <li>About the Authors … 319</li>
+  <li>Index … 321</li>
+</ul>
+</div>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">XQuery for Humanists</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col"><ul class="social-media-list"><li>Clifford B. Anderson</li><li>Joseph C. Wicentowski</li></ul>
+</div>
+
+      <div class="footer-col"><ul class="social-media-list"><li><a href="https://github.com/cliffordanderson"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">cliffordanderson</span></a></li><li><a href="https://github.com/joewiz"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">joewiz</span></a></li><li><a href="https://github.com/coding4humanists"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">coding4humanists</span></a></li></ul>
+</div>
+
+      <div class="footer-col"><ul class="social-media-list"><li><a href="https://www.twitter.com/andersoncliffb"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">andersoncliffb</span></a></li><li><a href="https://www.twitter.com/joewiz"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">joewiz</span></a></li><li><a href="https://www.twitter.com/coding4humanist"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">coding4humanist</span></a></li></ul>
+</div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>

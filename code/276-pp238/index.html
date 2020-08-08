@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Pp. 238 (no. 276) | XQuery for Humanists</title>
+<meta name="generator" content="Jekyll v4.0.0" />
+<meta property="og:title" content="Pp. 238 (no. 276)" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Companion website" />
+<meta property="og:description" content="Companion website" />
+<link rel="canonical" href="https://xquery.forhumanists.org/code/276-pp238/" />
+<meta property="og:url" content="https://xquery.forhumanists.org/code/276-pp238/" />
+<meta property="og:site_name" content="XQuery for Humanists" />
+<script type="application/ld+json">
+{"description":"Companion website","headline":"Pp. 238 (no. 276)","@type":"WebPage","url":"https://xquery.forhumanists.org/code/276-pp238/","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link type="application/atom+xml" rel="alternate" href="https://xquery.forhumanists.org/feed.xml" title="XQuery for Humanists" /><!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-161528434-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-161528434-1');
+</script></head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">XQuery for Humanists</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/code/">Code</a><a class="page-link" href="/errata/">Errata</a><a class="page-link" href="/functions/">Functions</a><a class="page-link" href="/implementations/">Implementations</a><a class="page-link" href="/"></a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">Pp. 238 (no. 276)</h1>
+  </header>
+
+  <div class="post-content">
+    <p>This code sample is adapted from Clifford B. Anderson and Joseph C. Wicentowski, 
+<a href="/"><em>XQuery for Humanists</em></a> (College Station: Texas A&amp;M University Press, 2020), 238. 
+Download this code sample in its <a href="/code/276-pp238/276-pp238.xq">raw form</a>.
+View the source on <a href="https://github.com/coding4humanists/xquery4humanists/blob/release/code/276-pp238/276-pp238.xq">GitHub</a>.</p>
+
+<div class="language-xquery highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">xquery</span><span class="w"> </span><span class="k">version</span><span class="w"> </span><span class="s">"3.1"</span><span class="p">;</span><span class="w">
+
+</span><span class="k">declare</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">tei</span><span class="o">=</span><span class="s">"http://www.tei-c.org/ns/1.0"</span><span class="p">;</span><span class="w">
+
+</span><span class="k">declare</span><span class="w"> </span><span class="nt">variable</span><span class="w"> </span><span class="nv">$poem</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nt">&lt;TEI</span><span class="w"> </span><span class="na">xmlns=</span><span class="s">"http://www.tei-c.org/ns/1.0"</span><span class="nt">&gt;</span><span class="w">
+    </span><span class="nt">&lt;teiHeader&gt;</span><span class="w">
+        </span><span class="nt">&lt;fileDesc&gt;</span><span class="w">
+            </span><span class="nt">&lt;titleStmt&gt;</span><span class="w">
+                </span><span class="nt">&lt;title&gt;</span>The<span class="w"> </span>Best<span class="w"> </span>Thing<span class="w"> </span>in<span class="w"> </span>the<span class="w"> </span>World<span class="nt">&lt;/title&gt;</span><span class="w">
+                </span><span class="nt">&lt;author&gt;</span>Elizabeth<span class="w"> </span>Barrett<span class="w"> </span>Browning<span class="nt">&lt;/author&gt;</span><span class="w">
+            </span><span class="nt">&lt;/titleStmt&gt;</span><span class="w">
+            </span><span class="nt">&lt;publicationStmt&gt;</span><span class="w">
+                </span><span class="nt">&lt;p&gt;</span>The<span class="w"> </span>Poetical<span class="w"> </span>Works,<span class="w"> </span>Vol.<span class="w"> </span>IV<span class="nt">&lt;/p&gt;</span><span class="w">
+            </span><span class="nt">&lt;/publicationStmt&gt;</span><span class="w">
+            </span><span class="nt">&lt;sourceDesc&gt;</span><span class="w">
+                </span><span class="nt">&lt;p&gt;</span>Project<span class="w"> </span>Gutenberg<span class="nt">&lt;/p&gt;</span><span class="w">
+            </span><span class="nt">&lt;/sourceDesc&gt;</span><span class="w">
+        </span><span class="nt">&lt;/fileDesc&gt;</span><span class="w">
+    </span><span class="nt">&lt;/teiHeader&gt;</span><span class="w">
+    </span><span class="nt">&lt;text&gt;</span><span class="w">
+        </span><span class="nt">&lt;body&gt;</span><span class="w">
+            </span><span class="nt">&lt;l&gt;</span>What's<span class="w"> </span>the<span class="w"> </span>best<span class="w"> </span>thing<span class="w"> </span>in<span class="w"> </span>the<span class="w"> </span>world?<span class="nt">&lt;/l&gt;</span><span class="w">
+            </span><span class="nt">&lt;l&gt;</span>June-rose,<span class="w"> </span>by<span class="w"> </span>May-dew<span class="w"> </span>impearled;<span class="nt">&lt;/l&gt;</span><span class="w">
+            </span><span class="nt">&lt;l&gt;</span>Sweet<span class="w"> </span>south-wind,<span class="w"> </span>that<span class="w"> </span>means<span class="w"> </span>no<span class="w"> </span>rain;<span class="nt">&lt;/l&gt;</span><span class="w">
+            </span><span class="nt">&lt;l&gt;</span>Truth,<span class="w"> </span>not<span class="w"> </span>cruel<span class="w"> </span>to<span class="w"> </span>a<span class="w"> </span>friend;<span class="nt">&lt;/l&gt;</span><span class="w">
+            </span><span class="nt">&lt;l&gt;</span>Pleasure,<span class="w"> </span>not<span class="w"> </span>in<span class="w"> </span>haste<span class="w"> </span>to<span class="w"> </span>end;<span class="nt">&lt;/l&gt;</span><span class="w">
+            </span><span class="nt">&lt;l&gt;</span>Beauty,<span class="w"> </span>not<span class="w"> </span>self-decked<span class="w"> </span>and<span class="w"> </span>curled<span class="nt">&lt;/l&gt;</span><span class="w">
+            </span><span class="nt">&lt;l&gt;</span>Till<span class="w"> </span>its<span class="w"> </span>pride<span class="w"> </span>is<span class="w"> </span>over-plain;<span class="nt">&lt;/l&gt;</span><span class="w">
+            </span><span class="nt">&lt;l&gt;</span>Light,<span class="w"> </span>that<span class="w"> </span>never<span class="w"> </span>makes<span class="w"> </span>you<span class="w"> </span>wink;<span class="nt">&lt;/l&gt;</span><span class="w">
+            </span><span class="nt">&lt;l&gt;</span>Memory,<span class="w"> </span>that<span class="w"> </span>gives<span class="w"> </span>no<span class="w"> </span>pain;<span class="nt">&lt;/l&gt;</span><span class="w">
+            </span><span class="nt">&lt;l&gt;</span>Love,<span class="w"> </span>when,<span class="w"> </span>so,<span class="w"> </span>you're<span class="w"> </span>loved<span class="w"> </span>again.<span class="nt">&lt;/l&gt;</span><span class="w">
+            </span><span class="nt">&lt;l&gt;</span>What's<span class="w"> </span>the<span class="w"> </span>best<span class="w"> </span>thing<span class="w"> </span>in<span class="w"> </span>the<span class="w"> </span>world?<span class="nt">&lt;/l&gt;</span><span class="w">
+            </span><span class="nt">&lt;l&gt;</span>—Something<span class="w"> </span>out<span class="w"> </span>of<span class="w"> </span>it,<span class="w"> </span>I<span class="w"> </span>think.<span class="nt">&lt;/l&gt;</span><span class="w">
+        </span><span class="nt">&lt;/body&gt;</span><span class="w">
+    </span><span class="nt">&lt;/text&gt;</span><span class="w">
+</span><span class="nt">&lt;/TEI&gt;</span><span class="p">;</span><span class="w">
+
+</span><span class="k">declare</span><span class="w"> </span><span class="nt">variable</span><span class="w"> </span><span class="nv">$lines</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nv">$poem</span><span class="o">/</span><span class="nt">tei:text</span><span class="o">/</span><span class="nt">tei:body</span><span class="o">/</span><span class="nt">tei:l</span><span class="p">;</span><span class="w">
+
+</span><span class="nv">$lines</span><span class="p">[</span><span class="o">.</span><span class="w"> </span><span class="nt">contains</span><span class="w"> </span><span class="k">text</span><span class="w"> </span><span class="p">(</span><span class="s">"in"</span><span class="w"> </span><span class="nt">not</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="s">"in the world"</span><span class="p">)</span><span class="w"> </span><span class="nt">ftand</span><span class="w"> </span><span class="s">"end"</span><span class="w"> </span><span class="nt">ftor</span><span class="w"> </span><span class="s">"light"</span><span class="p">]</span><span class="w">
+</span></code></pre></div></div>
+
+  </div>
+
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">XQuery for Humanists</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col"><ul class="social-media-list"><li>Clifford B. Anderson</li><li>Joseph C. Wicentowski</li></ul>
+</div>
+
+      <div class="footer-col"><ul class="social-media-list"><li><a href="https://github.com/cliffordanderson"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">cliffordanderson</span></a></li><li><a href="https://github.com/joewiz"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">joewiz</span></a></li><li><a href="https://github.com/coding4humanists"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">coding4humanists</span></a></li></ul>
+</div>
+
+      <div class="footer-col"><ul class="social-media-list"><li><a href="https://www.twitter.com/andersoncliffb"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">andersoncliffb</span></a></li><li><a href="https://www.twitter.com/joewiz"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">joewiz</span></a></li><li><a href="https://www.twitter.com/coding4humanist"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">coding4humanist</span></a></li></ul>
+</div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>

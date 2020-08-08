@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Implementations | XQuery for Humanists</title>
+<meta name="generator" content="Jekyll v4.0.0" />
+<meta property="og:title" content="Implementations" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Companion website" />
+<meta property="og:description" content="Companion website" />
+<link rel="canonical" href="https://xquery.forhumanists.org/implementations/" />
+<meta property="og:url" content="https://xquery.forhumanists.org/implementations/" />
+<meta property="og:site_name" content="XQuery for Humanists" />
+<script type="application/ld+json">
+{"description":"Companion website","headline":"Implementations","@type":"WebPage","url":"https://xquery.forhumanists.org/implementations/","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link type="application/atom+xml" rel="alternate" href="https://xquery.forhumanists.org/feed.xml" title="XQuery for Humanists" /><!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-161528434-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-161528434-1');
+</script></head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">XQuery for Humanists</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/code/">Code</a><a class="page-link" href="/errata/">Errata</a><a class="page-link" href="/functions/">Functions</a><a class="page-link" href="/implementations/">Implementations</a><a class="page-link" href="/"></a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">Implementations</h1>
+  </header>
+
+  <div class="post-content">
+    <p>This document discusses the four XQuery implementations discussed in the book: <a href="#basex">BaseX</a>, <a href="#exist">eXist</a>, <a href="#saxon">Saxon</a>, and <a href="#oxygen-xml-editor">oXygen XML Editor</a>. It lists key links, describes support for the XQuery specifications, and provides chapter-specific notes.</p>
+
+<h2 id="basex">BaseX</h2>
+
+<h3 id="basex-links">BaseX links</h3>
+
+<ul>
+  <li>Homepage: <a href="http://basex.org">http://basex.org</a></li>
+  <li>Documentation: <a href="http://docs.basex.org/wiki/Main_Page">http://docs.basex.org/wiki/Main_Page</a></li>
+  <li>Source code: <a href="https://github.com/basexdb/basex">https://github.com/basexdb/basex</a></li>
+  <li>Mailing list: <a href="https://mailman.uni-konstanz.de/mailman/listinfo/basex-talk">basex-talk</a></li>
+  <li>Stack Overflow: <a href="https://stackoverflow.com/questions/tagged/basex">Questions tagged basex</a></li>
+</ul>
+
+<h3 id="xquery-coverage-in-basex">XQuery coverage in BaseX</h3>
+
+<p>BaseX has posted full notes on its <a href="http://docs.basex.org/wiki/XQuery">conformance with XQuery 3.1 and related standards</a>. The following information is current as of BaseX 9.3.1.</p>
+
+<ul>
+  <li>BaseX supports all of XQuery 3.1 Functions and Operators, except for the following (note that all functions covered in the book have alternatives listed):
+    <ul>
+      <li><code class="highlighter-rouge">fn:collation-key()</code></li>
+      <li><code class="highlighter-rouge">fn:load-xquery-module()</code></li>
+      <li><code class="highlighter-rouge">fn:transform()</code> (use BaseX’s <a href="http://docs.basex.org/wiki/XSLT"><code class="highlighter-rouge">xslt:transform()</code></a> function)</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="chapter-specific-notes-for-basex">Chapter-specific notes for BaseX</h3>
+
+<ul>
+  <li>Chapter 9
+    <ul>
+      <li><code class="highlighter-rouge">fn:put()</code> writes documents to “secondary storage”. See BaseX’s documentation for <a href="http://docs.basex.org/wiki/XQuery_Update#Built-in_Functions">discussion</a> of this function and a link to “Additional database functions exist for performing updates on document and database level.”</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="exist">eXist</h2>
+
+<h3 id="exist-links">eXist links</h3>
+
+<ul>
+  <li>Homepage: <a href="https://exist-db.org">https://exist-db.org</a></li>
+  <li>Documentation: <a href="https://exist-db.org/exist/apps/doc">https://exist-db.org/exist/apps/doc</a></li>
+  <li>Source code: <a href="https://github.com/eXist-db/exist">https://github.com/eXist-db/exist</a></li>
+  <li>Mailing list: <a href="https://lists.sourceforge.net/lists/listinfo/exist-open">exist-open</a></li>
+  <li>Stack Overflow: <a href="https://stackoverflow.com/questions/tagged/exist-db">Questions tagged exist-db</a></li>
+</ul>
+
+<h3 id="xquery-coverage-in-exist">XQuery coverage in eXist</h3>
+
+<p>eXist has posted full notes on its <a href="https://exist-db.org/exist/apps/doc/xquery#current-status-of-xquery-support">conformance with XQuery 3.1 and related standards</a>. The following list is current as of eXist v5.2.0.</p>
+
+<ul>
+  <li>eXist has implemented all of XQuery 3.1, but has not yet implemented:
+    <ul>
+      <li>Count clause (introduced in Chapter 7; pre-sorting results and using the <code class="highlighter-rouge">at</code> clause can generally be substituted)</li>
+      <li>Windowing (introduced in Chapter 7)</li>
+    </ul>
+  </li>
+  <li>eXist supports all of XQuery 3.1 Functions and Operators, except for the following (note that all functions covered in the book have alternatives listed, and most of the others have alternate methods of achieving the same aim):
+    <ul>
+      <li><code class="highlighter-rouge">array:sort()</code> (as an alternative, use a FLWOR expression with the <code class="highlighter-rouge">order by</code> clause)</li>
+      <li><code class="highlighter-rouge">fn:collation-key()</code></li>
+      <li><code class="highlighter-rouge">fn:default-language()</code></li>
+      <li><code class="highlighter-rouge">fn:element-with-id()</code></li>
+      <li><code class="highlighter-rouge">fn:format-integer()</code> (the <code class="highlighter-rouge">fn:format-number()</code> function can generally be substituted)</li>
+      <li><code class="highlighter-rouge">fn:nilled()</code></li>
+      <li><code class="highlighter-rouge">fn:path()</code> (use eXist’s <a href="https://exist-db.org/exist/apps/fundocs/view.html?uri=http://exist-db.org/xquery/util#node-xpath.1"><code class="highlighter-rouge">util:node-xpath()</code></a> function)</li>
+      <li><code class="highlighter-rouge">fn:round()</code> (eXist supports the version that rounds to the nearest whole number; the version that takes a <code class="highlighter-rouge">$precision</code> parameter is not present, but, for example, a precision of 2 can be achieved by multiplying the number by 100 before rounding it, then dividing the result by 100).</li>
+      <li><code class="highlighter-rouge">fn:nilled()</code></li>
+      <li><code class="highlighter-rouge">fn:trace()</code> (eXist supports the version with two parameters but not just one)</li>
+      <li><code class="highlighter-rouge">fn:transform()</code> (use eXist’s <a href="https://exist-db.org/exist/apps/fundocs/view.html?uri=http://exist-db.org/xquery/transform#transform.3"><code class="highlighter-rouge">transform:transform()</code></a> function)</li>
+      <li><code class="highlighter-rouge">fn:uri-collection()</code></li>
+      <li><code class="highlighter-rouge">fn:xml-to-json()</code> (this function is available in an <a href="https://gist.github.com/joewiz/d986da715facaad633db">eXist-compatible implementation</a>)</li>
+      <li><code class="highlighter-rouge">map:find()</code> (use this <a href="https://gist.github.com/joewiz/906c7d3248c09a07407d91b73dfd7fe0">eXist-compatible implementation</a>)</li>
+    </ul>
+  </li>
+  <li>eXist has not implemented the following related specifications:
+    <ul>
+      <li>XQuery Update Facility 3.0 (introduced in Chapter 9). Instead, it provides <a href="https://exist-db.org/exist/apps/doc/update_ext.xml">an eXist-specific update facility</a>.</li>
+      <li>XPath and XQuery Full Text 3.0 (introduced in Chapter 10). Instead, it provides <a href="https://exist-db.org/exist/apps/doc/lucene.xml">a full text search module</a> based on Apache Lucene.</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="chapter-specific-notes-for-exist">Chapter-specific notes for eXist</h3>
+
+<ul>
+  <li>Chapter 9
+    <ul>
+      <li>eXist does not support the XQuery Update Facility 3.0. Instead, use the <a href="https://exist-db.org/exist/apps/doc/update_ext.xml">eXist-specific update facility</a>, which can perform all of the same functions.</li>
+      <li>As a substitute for the <code class="highlighter-rouge">fn:put()</code> function, introduced in XQuery Update Facility 3.0, use <a href="https://exist-db.org/exist/apps/fundocs/view.html?uri=http://exist-db.org/xquery/xmldb#store.3"><code class="highlighter-rouge">xmldb:store()</code></a> to store documents or resources in the database or <a href="https://exist-db.org/exist/apps/fundocs/view.html?uri=http://exist-db.org/xquery/file#serialize.3"><code class="highlighter-rouge">file:serialize()</code></a> to store XML documents on the file system. (See also <a href="https://exist-db.org/exist/apps/fundocs/view.html?uri=http://exist-db.org/xquery/file#serialize-binary.2"><code class="highlighter-rouge">file:serialize-binary()</code></a> to store non-XML resources to the file system.)</li>
+      <li>eXist does not require the <code class="highlighter-rouge">%updating</code> annotation to be added to functions that contain updating expressions. Nor does it require the <code class="highlighter-rouge">%simple</code> annotation to be added to non-updating functions.</li>
+    </ul>
+  </li>
+  <li>Chapter 10
+    <ul>
+      <li>eXist does not support the XPath and XQuery Full Text Facility 3.0 (introduced in Chapter 10). Instead, it provides <a href="https://exist-db.org/exist/apps/doc/lucene.xml">a full text search module</a> based on Apache Lucene, which can perform many of the same functions, as well as other functions not provided by the XQuery Full Text Facility.</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="saxon">Saxon</h2>
+
+<p>Saxon is oXygen’s default, built-in XQuery engine. It can also be called via the command line.</p>
+
+<h3 id="saxon-links">Saxon links</h3>
+
+<ul>
+  <li>Homepage: <a href="https://www.saxonica.com/">https://www.saxonica.com</a></li>
+  <li>Documentation: <a href="https://www.saxonica.com/documentation/documentation.xml">https://www.saxonica.com/documentation/documentation.xml</a></li>
+  <li>Source code: <a href="https://www.saxonica.com/html/documentation/about/resources.html">https://www.saxonica.com/html/documentation/about/resources.html</a></li>
+  <li>Mailing list: <a href="https://sourceforge.net/projects/saxon/lists/saxon-help">saxon-help</a></li>
+  <li>Stack Overflow: <a href="https://stackoverflow.com/questions/tagged/saxon">Questions tagged saxon</a></li>
+</ul>
+
+<h3 id="xquery-coverage-in-saxon">XQuery coverage in Saxon</h3>
+
+<p>Saxon has posted full notes on its <a href="http://www.saxonica.com/html/documentation/conformance/xquery31.html">conformance with XQuery 3.1 and related standards</a>.</p>
+
+<ul>
+  <li>Saxon supports the full XQuery 3.1 Functions and Operators specification.</li>
+  <li>Saxon has not implemented the following related specifications:
+    <ul>
+      <li>XQuery Update Facility 3.0 (introduced in Chapter 9), but implements XQuery Update Facility 1.0 as extensions to the XQuery 3.1 grammar.</li>
+      <li>XQuery Full Text Facility 3.0 (introduced in Chapter 10). Saxon provides no full text search facility.</li>
+    </ul>
+  </li>
+  <li>The different editions of Saxon implement different levels of XQuery 3.1:
+    <ul>
+      <li>Saxon-HE (the free, open source edition) implements XQuery 3.1 at the Minimal Conformance level, plus the Module Feature and the Serialization Feature.</li>
+      <li>Saxon-PE (commercial, included in oXygen) adds support for the Higher-Order Function Feature.</li>
+      <li>Saxon-EE (commercial, included in oXygen) adds support for the Schema Aware Feature and the Typed Data Feature.</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="chapter-specific-notes-for-saxon">Chapter-specific notes for Saxon</h3>
+
+<ul>
+  <li>Chapter 4
+    <ul>
+      <li>Saxon complains when serializing a free-standing attribute node (04-13, 04-15). As a workaround, add <code class="highlighter-rouge">/fn:string()</code> to the expression to retrieve the string value of the attribute.</li>
+    </ul>
+  </li>
+  <li>Chapter 5
+    <ul>
+      <li>oXygen 20.1 (which bundles Saxon 9.8.0.12) returns no results for 05-23, but Saxon 9.9.0.1 returns the expected result.</li>
+    </ul>
+  </li>
+  <li>Chapter 7
+    <ul>
+      <li>As noted in the note in the text, oXygen complains when serializing non-XML items like maps, arrays, or functions. Use the workaround noted in the text, the <code class="highlighter-rouge">fn:serialize()</code> function. (Also affects Chapter 12.)</li>
+      <li>When using functions in the <code class="highlighter-rouge">map</code> or <code class="highlighter-rouge">array</code> namespace, these namespaces must be declared in the prolog.</li>
+    </ul>
+  </li>
+  <li>Chapter 9
+    <ul>
+      <li>When running 09-05 in oXygen, must enable “linked tree model” in Preferences &gt; Saxon HE/PE/EE Options. I was unable to get the <code class="highlighter-rouge">-tree:linked</code> flag to work when executing this query on the command line.</li>
+      <li>09-11 thru 09-13 complains of “unexpected token name ‘transform’ beyond end of query</li>
+    </ul>
+  </li>
+  <li>Chapter 12
+    <ul>
+      <li>The <code class="highlighter-rouge">fn:json-to-xml()</code> function used in 12-07 fails when the “linked tree model” is enabled; the error is “missing call on startContent()”; disabling this allows the function to work</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="oxygen-xml-editor">oXygen XML Editor</h2>
+
+<h3 id="oxygen-links">oXygen links</h3>
+
+<ul>
+  <li>Homepage: <a href="https://www.oxygenxml.com">https://www.oxygenxml.com</a></li>
+  <li>Documentation: <a href="https://www.oxygenxml.com/doc/versions/22.0/ug-editor/index.html">https://www.oxygenxml.com/doc/versions/22.0/ug-editor/index.html</a></li>
+  <li>Mailing list: <a href="https://www.oxygenxml.com/mailinglists.html">oxygen-user</a></li>
+  <li>Forum: <a href="https://www.oxygenxml.com/forum/">oXygen Forums</a></li>
+</ul>
+
+<h3 id="xquery-coverage-in-oxygen">XQuery coverage in oXygen</h3>
+
+<ul>
+  <li>By default, oXygen is configured to use Saxon as its XQuery engine. For information on Saxon, see <a href="#saxon">above</a>.</li>
+  <li>oXygen can also be <a href="https://www.oxygenxml.com/xml_editor/eXist_support.html">configured</a> to use eXist as its XQuery engine. This is configured via Preferences &gt; XQuery &gt; XML &gt; XSLT-FO-XQuery &gt; XQuery &gt; Validation engine. For information on eXist, see <a href="#exist">above</a>.</li>
+</ul>
+
+  </div>
+
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">XQuery for Humanists</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col"><ul class="social-media-list"><li>Clifford B. Anderson</li><li>Joseph C. Wicentowski</li></ul>
+</div>
+
+      <div class="footer-col"><ul class="social-media-list"><li><a href="https://github.com/cliffordanderson"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">cliffordanderson</span></a></li><li><a href="https://github.com/joewiz"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">joewiz</span></a></li><li><a href="https://github.com/coding4humanists"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">coding4humanists</span></a></li></ul>
+</div>
+
+      <div class="footer-col"><ul class="social-media-list"><li><a href="https://www.twitter.com/andersoncliffb"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">andersoncliffb</span></a></li><li><a href="https://www.twitter.com/joewiz"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">joewiz</span></a></li><li><a href="https://www.twitter.com/coding4humanist"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">coding4humanist</span></a></li></ul>
+</div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
